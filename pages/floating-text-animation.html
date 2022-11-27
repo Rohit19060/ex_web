@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <meta name="author" content="Rohit Jain">
+      <title>Floating Text Animation</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+            body {
+                  margin: 0;
+                  padding: 0;
+            }
+
+            section {
+                  width: 100%;
+                  height: 100%;
+                  font-size: 10px;
+                  background: #95C623;
+                  box-sizing: border-box;
+                  overflow: hidden;
+                  position: absolute;
+            }
+
+            .wrapper {
+                  width: 50%;
+                  height: 100%;
+                  background: #e55812;
+                  overflow: hidden;
+                  color: #eaffee;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  border-right: 2px solid #292929;
+            }
+
+            .sliding {
+                  position: absolute;
+                  top: 50%;
+                  white-space: nowrap;
+                  font-size: 12rem;
+                  line-height: 220px;
+                  overflow: hidden;
+                  font-family: sans-serif;
+                  animation: animate 10s linear infinite;
+            }
+
+            @keyframes animate {
+                  0% {
+                        transform: translate(0, -50%);
+                  }
+
+                  100% {
+                        transform: translate(-50%, -50%);
+                  }
+            }
+      </style>
+</head>
+
+<body>
+      <section>
+            <span class="sliding">
+                  <span>King</span>
+                  <span>Technologies</span>
+            </span>
+            <div class="wrapper">
+                  <span class="sliding">
+                        <span>King</span>
+                        <span>Technologies</span>
+                  </span>
+            </div>
+      </section>
+</body>
+
+</html>

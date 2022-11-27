@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Rohit Jain">
+  <title>Block Reveal Effect </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      background-size: cover;
+    }
+
+    h1 {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      color: #fff;
+      font-size: 42px;
+      text-transform: uppercase;
+      padding: 0.4em 1em;
+      position: absolute;
+      top: 40%;
+      left: 46%;
+      transform: translate(-50%, -50%);
+    }
+
+    .rev-block {
+      position: absolute;
+    }
+
+    .rev-block span {
+      opacity: 0;
+      animation: appear-text 0.0001s linear forwards;
+      animation-delay: 1.5s;
+    }
+
+    .rev-block:after {
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      background: #b86800;
+      animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes rev-block {
+      0% {
+        left: 0;
+        width: 0%;
+      }
+
+      50% {
+        left: 0;
+        width: 100%;
+      }
+
+      100% {
+        left: 100%;
+        width: 0%;
+      }
+    }
+
+    @keyframes appear-text {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    #onemore {
+      top: 51%;
+      left: 50%;
+    }
+
+    #onemore span {
+      animation-delay: 2s;
+    }
+
+    #onemore.rev-block:after {
+      background: rgb(0, 26, 255);
+      animation-delay: 1.4s;
+    }
+
+    @media only screen and (max-width:900px) {
+      h1 {
+        font-size: 20px;
+        padding: 0.4em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="rev-block">
+    <span>Block Reveal Effect</span>
+  </h1>
+  <h1 class="rev-block" id="onemore">
+    <span>By King Technologies</span>
+  </h1>
+</body>
+
+</html>

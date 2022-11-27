@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Rohit Jain">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Layout Design</title>
+	<style>
+		body {
+			background-color: #FDF8AB;
+			background-image: url("Images/BgPage.png");
+			background-repeat: repeat-y;
+			background-position: center top;
+			width: 760px;
+			margin: auto;
+			padding: 0px;
+		}
+
+		p {
+			color: #505050;
+			font-size: 1em;
+			font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+			margin-left: 100px;
+		}
+
+		h1,
+		h2,
+		h3 {
+			color: #BD8100;
+			font-family: Baskerville, "Palatino Linotype", Times, serif;
+			padding-top: 7px;
+			padding-left: 100px;
+		}
+
+		h1,
+		h2 {
+			border-top: 2px #86A100 solid;
+		}
+
+		h2 {
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+		}
+
+		.note {
+			color: #333;
+			border-bottom: 2px #BD8110 dashed;
+			background-color: #FBF8A9;
+			margin-top: 25px;
+			margin-bottom: 35px;
+			padding: 20px;
+		}
+
+		.note span {
+			color: #FC6512;
+			font-weight: bold;
+		}
+
+		#top p:first-of-type {
+			color: #FF6600;
+			font-size: 1.2em;
+			line-height: 1.4em;
+			margin-top: 20px;
+		}
+
+		.floated {
+			width: 45%;
+			float: left;
+		}
+	</style>
+</head>
+
+<body>
+	<div><img src="Images/Banner.png" width="760" height="198" alt="CSS: The Missing Manual">
+	</div>
+	<div id="top">
+		<h1>The Amazing World of CSS</h1>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+			aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+			Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+			dolores eos qui ratione voluptatem sequi nesciunt. </p>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+			aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+			Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+			dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+			sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+			magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+			suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
+			ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
+			nulla pariatur?</p>
+		<p class="note"><span>NOTE:</span> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+			laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+	</div>
+	<h2>Who Knew CSS Had Such Power?</h2>
+	<div class="floated">
+		<h3>Not Me!</h3>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+			aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+			Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+			dolores eos qui ratione voluptatem sequi nesciunt.</p>
+	</div>
+	<div class="floated">
+		<h3>Me Neither!</h3>
+		<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+			numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+			veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+			consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+			consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Rohit Jain">
+  <title>Border Hover Effect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    a {
+      padding: 0.5em 0.8em;
+      color: black;
+      position: relative;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    a:before,
+    a:after {
+      height: 14px;
+      width: 14px;
+      position: absolute;
+      content: "";
+      transition: all 0.35s ease;
+      opacity: 0;
+    }
+
+    a:before {
+      right: 0;
+      top: 0;
+      border-right: 3px solid red;
+      border-top: 3px solid red;
+      transform: translate(-100%, 50%);
+    }
+
+    a:after {
+      left: 0;
+      bottom: 0;
+      border-left: 3px solid red;
+      border-bottom: 3px solid red;
+      transform: translate(100%, -50%);
+    }
+
+    a:hover:before,
+    a:hover:after {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background: url(bg.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: table;
+      font-family: 'Arial Narrow Bold', sans-serif;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 60px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .logo {
+      float: left;
+      color: #000;
+      font-size: 16px;
+      line-height: 60px;
+      padding: 0 6em;
+    }
+
+    .menu {
+      float: right;
+      line-height: 40px;
+      margin: 0 6em;
+    }
+
+    .menu ul {
+      list-style: none;
+    }
+
+    .menu ul li {
+      display: inline-block;
+    }
+
+    .header {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .header h1 {
+      color: #000;
+      font-size: 46px;
+      font-weight: bolder;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #000;
+      font-size: 24px;
+      font-weight: bolder;
+    }
+
+    .header button {
+      color: #000;
+      background: #009F8B;
+      padding: 12px 32px;
+      border: none;
+      font-size: 14px;
+      margin-top: 40px;
+      border-radius: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="nav">
+      <div class="logo"> Logo </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Listenings</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="header">
+      <h1> The White Swan </h1>
+      <p>New Jersey</p>
+      <button type="button">View Details</button>
+    </div>
+  </div>
+</body>
+
+</html>

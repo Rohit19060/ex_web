@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="author" content="Rohit Jain">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Scroll Indicator</title>
+      <style>
+            header {
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  z-index: 1;
+                  width: 100%;
+                  background: #fff;
+                  border-bottom: 1px solid #ccc;
+            }
+
+            .header-proper {
+                  width: 80%;
+                  margin: 0 auto;
+            }
+
+            .header-proper .logo {
+                  font-family: 'Courier New', Courier, monospace;
+            }
+
+            .scroll-line {
+                  height: 2px;
+                  margin-bottom: -2px;
+                  background: #000;
+                  width: 0%;
+            }
+
+            .content {
+                  padding: 100px 0;
+                  margin: 0 auto;
+                  width: 80%;
+            }
+
+            p {
+                  font-family: 'Courier New', Courier, monospace;
+                  font-size: 120%;
+                  font-weight: 300;
+                  color: grey;
+                  line-height: 40px;
+            }
+      </style>
+</head>
+
+<body>
+      <header>
+            <div class="header-proper">
+                  <h1 class="logo">Scroll Indicator</h1>
+            </div>
+            <div class="scroll-line"> </div>
+      </header>
+      <div class="mail">
+            <div class="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla dolor quod corporis natus
+                        sequi possimus illum mollitia! Exercitationem sint nobis repudiandae ullam porro illum
+                        consequuntur commodi hic ut aperiam.</p>
+            </div>
+      </div>
+      <script>
+            window.addEventListener('scroll', function () {
+                  var winTop = window.pageYOffset,
+                        docHeight = document.body.scrollHeight,
+                        winHeight = window.innerHeight;
+                  var scrolled = (winTop / (docHeight - winHeight)) * 100;
+                  document.querySelector('.scroll-line').style.width = scrolled + '%';
+            });   
+      </script>
+</body>
+
+</html>

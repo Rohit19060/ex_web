@@ -1,0 +1,149 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Rohit Jain">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Photo Gallery</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
+		<div class="container">
+			<div class="nav navbar-brand">
+				<h1>Photo Gallery</h1>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="#" class="nav-link disabled">Home</a></li>
+				<li><a href="#" class="nav-link disabled">Nature Gallery</a></li>
+				<li><a href="#" class="nav-link disabled">Science Gallery</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="Images/6.jpg" alt="First slide" class="img-fluid">
+				</div>
+				<div class="carousel-item">
+					<img src="Images/5.jpg" alt="Second slide" class="img-fluid">
+				</div>
+				<div class="carousel-item">
+					<img src="Images/4.jpg" alt="Third slide" class="img-fluid">
+				</div>
+				<div class="carousel-item">
+					<img src="Images/3.jpg" alt="Forth slide" class="img-fluid">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			</a>
+			<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			</a>
+		</div>
+	</div>
+	<br><br>
+	<div class="row" style="margin: 0 !important;">
+		<div class="col-sm-4">
+			<a href="#m1" data-toggle="modal">
+				<img src="Images/1.jpg" alt=".." class="img-thumbnail">
+			</a>
+			<div class="modal fade" id="m1">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<img src="Images/1.jpg" class="img-fluid" alt="..">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<a href="#m2" data-toggle="modal">
+				<img src="Images/2.jpg" alt=".." class="img-thumbnail">
+			</a>
+			<div class="modal fade" id="m2">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<img src="Images/2.jpg" class="img-fluid" alt="..">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<a href="#m3" data-toggle="modal">
+				<img src="Images/3.jpg" alt=".." class="img-thumbnail">
+			</a>
+			<div class="modal fade" id="m3">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<img src="Images/3.jpg" class="img-fluid" alt="..">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<a href="#m4" data-toggle="modal">
+				<img src="Images/4.jpg" alt=".." class="img-thumbnail">
+			</a>
+			<div class="modal fade" id="m4">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<img src="Images/4.jpg" class="img-fluid" alt="..">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<a href="#m5" data-toggle="modal">
+				<img src="Images/5.jpg" alt=".." class="img-thumbnail">
+			</a>
+			<div class="modal fade" id="m5">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<img src="Images/5.jpg" class="img-fluid" alt="..">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<a href="#m6" data-toggle="modal">
+				<img src="Images/6.jpg" alt=".." class="img-thumbnail">
+			</a>
+			<div class="modal fade" id="m6">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<img src="Images/6.jpg" class="img-fluid" alt="..">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<footer class="navbar navbar-dark navbar-expand-sm bg-dark text-center">
+		<p class="text-white-50 ">Photo Gallery &copy; Copyright</p>
+	</footer>
+</body>
+
+</html>

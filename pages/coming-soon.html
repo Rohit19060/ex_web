@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <meta name="author" content="Rohit Jain">
+      <title>Coming Soon</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+            html,
+            body {
+                  height: 100%;
+                  margin: 0;
+                  padding: 0;
+            }
+
+            .bgimg {
+                  background: url("images/Bg.jpg");
+                  height: 100%;
+                  background-position: center;
+                  background-size: cover;
+                  position: relative;
+                  color: #fff;
+                  font-family: prime;
+            }
+
+            .middle {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  text-align: center;
+                  font-weight: 1000;
+            }
+
+            h1 {
+                  font-size: 40px;
+                  letter-spacing: 30px;
+                  font-weight: 000;
+                  animation: anim 1s infinite;
+            }
+
+            @keyframes anim {
+                  0% {
+                        letter-spacing: 30px;
+                        font-weight: 1000;
+                  }
+
+                  50% {
+                        letter-spacing: 40px;
+                        font-weight: 0;
+                  }
+
+                  100% {
+                        letter-spacing: 30px;
+                        font-weight: 1000;
+                  }
+            }
+
+            #time {
+                  font-weight: lighter;
+                  word-spacing: 24px;
+                  color: black;
+            }
+
+            hr {
+                  margin: auto;
+                  width: 80%;
+                  border: 1.5px solid #fff;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="bgimg">
+            <div class="middle">
+                  <h1>Coming Soon</h1>
+                  <hr>
+                  <h2 id="time"></h2>
+            </div>
+      </div>
+      <script>
+            var deadline = new Date("Jul 17, 2023 23:59:00").getTime();
+            var everySecond = setInterval(function () {
+                  "use strict";
+                  var now = new Date().getTime();
+                  var interval = deadline - now;
+                  var days = Math.floor(interval / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((interval % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((interval % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((interval % (1000 * 60)) / 1000);
+                  document.getElementById("time").innerHTML = days + "d " + hours + "h " + minutes +
+                        "m " + seconds + "s ";
+                  if (interval < 0) {
+                        clearInterval(everySecond);
+                  }
+            }, 1000);
+      </script>
+</body>
+
+</html>

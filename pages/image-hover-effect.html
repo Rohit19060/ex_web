@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Rohit Jain">
+  <title>Image Hover Effect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #333;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .img {
+      width: 240px;
+      height: 400px;
+      display: inline-block;
+      margin: 10px;
+      background-repeat: no-repeat;
+      transition: 2s;
+    }
+
+    .img:hover {
+      background-position: bottom;
+    }
+
+    .img1 {
+      background-image: url("images/4.jpg");
+    }
+
+    .img2 {
+      background-image: url("images/2.jpg");
+    }
+
+    .img3 {
+      background-image: url("images/3.jpg");
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="img img1"></div>
+    <div class="img img2"></div>
+    <div class="img img3"></div>
+  </div>
+</body>
+
+</html>

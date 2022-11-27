@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        *,
+        ::before,
+        ::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            height: 100vh;
+        }
+
+        .clock-container {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            text-shadow: 1px 1px 1px rgb(0, 0, 0);
+        }
+
+        .clock {
+            font-size: 80px;
+        }
+
+        .user {
+            font-size: 2.8rem;
+        }
+
+        .focus-container {
+            width: 100%;
+            margin-top: 3rem;
+            font-size: 2rem;
+        }
+
+        .focus-container input {
+            width: 100%;
+            height: 60px;
+            background: transparent;
+            border: none;
+            outline: none;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        small {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="clock-container">
+        <div id="displayClock" class="clock"> Display Time</div>
+        <div id="user" class="user">User</div>
+    </main>
+
+    <script>
+        function showTime() {
+            const userName = "Rohit Jain";
+            const user = document.querySelector("#user");
+            let date = new Date();
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
+            let session = "AM";
+            let bg;
+
+            if (h == 0) h = 12;
+            if (h > 12) {
+                h = h - 12;
+                session = "PM";
+            }
+
+            h = h < 10 ? (h = "0" + h) : h;
+            m = m < 10 ? (m = "0" + m) : m;
+            s = s < 10 ? (s = "0" + s) : s;
+
+            if (h < 8 && session === "AM") {
+                bg = `url()`;
+                user.innerHTML = `Good Morning ${userName}`;
+            } else if (h < 11 && session === "AM") {
+                bg = `url()`;
+                user.innerHTML = `Good Day ${userName}`;
+            } else if (h < 8 && session === "PM") {
+                bg = `url()`;
+                user.innerHTML = `Good afternoon ${userName}`;
+            } else {
+                bg = `url()`;
+                user.innerHTML = `Good afternoon ${userName}`;
+            }
+
+            document.querySelector("#displayClock").innerHTML = `${h}:${m}<small>.${s}|${session}</small>`;
+            document.querySelector("body").style.background = `${bg} center/cover`;
+            setTimeout(showTime, 1000);
+        }
+
+        showTime()
+    </script>
+
+</body>
+
+</html>

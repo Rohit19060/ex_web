@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            padding: 2rem;
+            border-radius: 30px;
+            box-shadow:
+                -6px -6px 9px#fff,
+                6px 6px 9px rgba(0, 0, 0, 0.4);
+        }
+
+        main input,
+        main button {
+            outline: none;
+        }
+
+        input {
+            box-shadow:
+                inset -6px -6px 9px#fff,
+                inset 6px 6px 9px rgba(0, 0, 0, 0.4);
+            width: 320px;
+            height: 60px;
+            padding: 16px 32px;
+            text-align: right;
+            border: none;
+            border-radius: 30px;
+            text-shadow: -1px -1px 2px #fff, 2px 2px 2px rgba(0, 0, 0, 0.4);
+        }
+
+        .keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 0.8rem;
+            margin-top: 20px;
+        }
+
+        button {
+            box-shadow:
+                -6px -6px 9px#fff,
+                6px 6px 9px rgba(0, 0, 0, 0.4);
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background-color: #f5f5f5;
+        }
+
+        button:hover,
+        button:active {
+            background-color: #ccc;
+        }
+
+        button:active {
+            box-shadow:
+                inset -6px -6px 9px#fff,
+                inset 6px 6px 9px rgba(0, 0, 0, 0.4);
+        }
+
+        .op__key,
+        .eq__key {
+            color: #ff652f;
+        }
+
+        .op__key {
+            color: #ff652f;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <input type="number" name="input" id="input" value="0">
+        <div class="keys">
+            <button class="op__key" op="clear">C</button>
+            <button class="op__key" op="negate">+/-</button>
+            <button class="op__key" op="percent">%</button>
+            <button class="op__key" op="divide">/</button>
+            <button class="num__key">7</button>
+            <button class="num__key">8</button>
+            <button class="num__key">9</button>
+            <button class="op__key" op="multiply">X</button>
+            <button class="num__key">4</button>
+            <button class="num__key">5</button>
+            <button class="num__key">6</button>
+            <button class="op__key" op="Subtract">-</button>
+            <button class="num__key">1</button>
+            <button class="num__key">2</button>
+            <button class="num__key">3</button>
+            <button class="op__key" op="add">+</button>
+            <span></span>
+            <button class="num__key">0</button>
+            <button class="num__key">.</button>
+            <button class="eq__key">=</button>
+        </div>
+    </main>
+    <script>
+    </script>
+</body>
+
+</html>

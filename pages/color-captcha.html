@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am Not a Robot</title>
+    <link rel="shortcut icon" href="https://kingtechnologies.in/assets/images/Logo.webp" type="image/x-icon" />
+    <style>
+        body {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --light-c: #ddd;
+            --dark-c: #111;
+        }
+
+        h1 {
+            color: orange;
+            margin: 4rem 0;
+        }
+
+        h1 span {
+            background-color: var(--light-c);
+            color: var(--dark-c);
+            padding: 0.2rem 1rem;
+        }
+
+        label {
+            color: var(--dark-c);
+        }
+
+        .container {
+            margin-top: 3rem;
+            padding: 10px;
+            width: 350px;
+            height: 350px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .element {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--light-c);
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.527);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--light-c);
+            border-radius: 5px;
+        }
+
+        .element:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 100px 5px var(--dark-c);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form_container">
+        <h1>Select the hexadecimal Color: <span id="SelectColor"> for Verifications!</span></h1>
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">Are you Human?</label>
+    </div>
+    <main class="container">
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+    </main>
+    <script>
+        const checkbox = document.querySelector("#checkbox");
+        const elements = document.querySelectorAll(".element");
+        const selectColor = document.querySelector("#SelectColor");
+
+        let letters = "0123456789ABCDEF";
+        let colors = [];
+
+        checkbox.disabled = true;
+
+        elements.forEach((x) => {
+            let color = "#";
+            for (let index = 0; index < 6; index++) {
+                color += letters[Math.floor(Math.random() * letters.length)]
+            }
+            x.style.backgroundColor = color;
+            x.innerHTML = color;
+            x.addEventListener("click", () => {
+                if (x.innerHTML === selectColor.innerHTML) {
+                    checkbox.checked = true;
+                    alert("You are Human");
+                    location.reload();
+                } else {
+                    alert("Please Verify You are a Human");
+                    location.reload();
+                }
+            });
+            colors.push(color);
+        });
+
+        selectColor.innerHTML = colors[Math.floor(Math.random() * colors.length)];
+    </script>
+</body>
+
+</html>

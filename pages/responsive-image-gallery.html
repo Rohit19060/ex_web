@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="author" content="Rohit Jain">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Image Gallery</title>
+      <style>
+            body {
+                  margin: 0;
+                  background: #0b0b0b;
+            }
+
+            header {
+                  margin: .5vw;
+                  font-size: 0;
+                  display: -ms-flexbox;
+                  -ms-flexbox-wrap: wrap;
+                  -ms-flexbox-direction: column;
+                  -webkit-flex-flow: row wrap;
+                  flex-flow: row wrap;
+                  display: -webkit-box;
+                  display: flex;
+            }
+
+            header div {
+                  -webkit-box-flex: auto;
+                  -ms-flex: auto;
+                  flex: auto;
+                  width: 200px;
+                  margin: .5vw;
+            }
+
+            header div img {
+                  width: 100%;
+                  height: auto;
+            }
+
+            @media screen and (max-width:400px) {
+                  header div {
+                        margin: 0;
+                  }
+
+                  header {
+                        padding: 0;
+                  }
+            }
+      </style>
+</head>
+
+<body>
+      <header>
+            <div><img src="Images/1.jpg" alt="wall"></div>
+            <div><img src="Images/2.jpg" alt="wall"></div>
+            <div><img src="Images/3.jpg" alt="wall"></div>
+            <div><img src="Images/4.jpg" alt="wall"></div>
+            <div><img src="Images/5.jpg" alt="wall"></div>
+      </header>
+</body>
+
+</html>

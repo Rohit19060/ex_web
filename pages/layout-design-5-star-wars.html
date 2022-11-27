@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Jain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars</title>
+    <style>
+        body {
+            margin: 5%;
+        }
+
+        section {
+            padding: 5%;
+            background-color: #f7e0f7;
+        }
+
+        header {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 10px;
+            background-color: #fc3a3a;
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        .break {
+            background-color: #e599c2;
+        }
+
+        #bh {
+            width: 100%;
+            text-align: center;
+            background-color: #ff8724;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .d1 {
+            flex: 2;
+            margin: 10px;
+            background-color: #ff8724;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            padding: 4px;
+            text-align: center;
+        }
+
+        .d2 {
+            padding: 10px;
+        }
+
+        .d1 h1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        footer {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #fc3a3a;
+            padding: 20px;
+        }
+
+        .border {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+            <img src="Images/luke.png" alt="Luke Skywalker" id="ls" height="100px" width="100px">
+            <h1>Star Wars Characters</h1>
+            <img src="Images/vader.png" alt="Dart Vader" id="dv" height="100px" width="100px">
+        </header>
+        <div class="break">
+            <br>
+        </div>
+        <div id="bh">
+            <div class="d1 border">
+                <h1>Heroes</h1>
+                <div class="border">
+                    <h3>Luke Skywalker</h3>
+                    <img src="Images/luke.png" alt="Luke Skywalker" width="100px" height="100px">
+                </div>
+                <div class="border">
+                    <h3>Hans Solo</h3>
+                    <img src="Images/han.png" alt="Hans Solo" width="100px" height="100px">
+                </div>
+            </div>
+            <div class="d2"></div>
+            <div class="d1 border">
+                <h1>Villains</h1>
+                <div class="border">
+                    <h3>Dart Vader</h3>
+                    <img src="Images/vader.png" alt="Dart Vader" width="100px" height="100px">
+                </div>
+                <div class="border">
+                    <h3>Boba Fett</h3>
+                    <img src="Images/boba.png" alt="Boba Fett" width="100px" height="100px">
+                </div>
+            </div>
+        </div>
+        <div class="break">
+            <br>
+        </div>
+        <footer>
+            <a href="#"><em>Contact Us</em></a>
+            <p>&copy; Star Wars Character 2020
+            </p>
+        </footer>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Jain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <style>
+        #psyduck {
+            transition: all 0.3s ease;
+            border: 0.0625em solid black;
+            border-radius: 3.75em;
+            padding: 20px;
+        }
+
+        .center {
+            margin-top: 100px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <figure id="image-box">
+        <button id="button1" onclick="increase()">Increase Image</button>
+        <button id="button2" onclick="decrease()">Decrease Image</button>
+        <button id="button3">Rotate 180 Image</button>
+        <button id="button4">Rotate -180 Image</button>
+        <br>
+        <br>
+        <figcaption>Level <input type="level" id="level" value="1" /></figcaption>
+    </figure>
+    <div class="center">
+        <img src="Images/1.png" id="psyduck" alt="psyduck" height="64px">
+    </div>
+    <script>
+        function increase() {
+            var x = document.getElementById("psyduck").height;
+            x = x * 1.10;
+            document.getElementById("psyduck").style.height = x + "px";
+            var Level = document.getElementById("level");
+            Level.value++;
+            if (Level.value > 16) {
+                var x = document.getElementById("psyduck");
+                x.setAttribute("src", "Images/2.png");
+            }
+        }
+        function decrease() {
+            var y = document.getElementById("psyduck").height;
+            y = y / 1.10;
+            document.getElementById("psyduck").style.height = y + "px";
+            var Level = document.getElementById("level");
+            Level.value--;
+            var x = document.createElement("IMG");
+            x.setAttribute("src", "Images/1.png");
+            if (Level.value <= 16) {
+                var x = document.getElementById("psyduck");
+                x.setAttribute("src", "Images/1.png");
+            }
+        }
+        var current_rotation = 0;
+        document.querySelector("#button3").addEventListener('click', function () {
+            current_rotation += 90;
+            document.querySelector("#psyduck").style.transform = 'rotate(' + current_rotation + 'deg)';
+        });
+        document.querySelector("#button4").addEventListener('click', function () {
+            current_rotation -= 90;
+            document.querySelector("#psyduck").style.transform = 'rotate(' + current_rotation + 'deg)';
+        });
+    </script>
+</body>
+
+</html>

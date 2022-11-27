@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8" />
+      <meta name="author" content="Rohit Jain">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Hamburgur Icon Animation</title>
+      <style>
+            body {
+                  animation: anim 15s infinite;
+            }
+
+            .data-text {
+                  width: 40%;
+                  text-align: justify;
+                  margin: 150px auto;
+            }
+
+            @keyframes anim {
+                  0% {
+                        background: #2E5266;
+                  }
+
+                  20% {
+                        background: #6E8898;
+                  }
+
+                  40% {
+                        background: #9FB1BC;
+                  }
+
+                  60% {
+                        background: #D3D0CB;
+                  }
+
+                  80% {
+                        background: #E2C044;
+                  }
+
+                  100% {
+                        background: #0CA98A;
+                  }
+            }
+
+            .hamburgur div {
+                  height: 5px;
+                  background: #000;
+                  margin: 4px 0;
+                  border-radius: 15px;
+                  transition: .2s;
+            }
+
+            .hamburgur {
+                  display: block;
+                  margin: 2em 0 0 2em;
+                  width: 50px;
+            }
+
+            .one {
+                  width: 57px;
+            }
+
+            .two {
+                  width: 30px;
+            }
+
+            .three {
+                  width: 40px;
+            }
+
+            .hamburgur:hover div {
+                  width: 50px;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="wrapper">
+            <a href="#" class="hamburgur">
+                  <div class="one"></div>
+                  <div class="two"></div>
+                  <div class="three"></div>
+            </a>
+            <div class="main data-text">
+                  <h1>Three Line Menu | Hover Effect</h1>
+            </div>
+      </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="author" content="Rohit Jain">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Skewed Background</title>
+      <style>
+            body {
+                  margin: 0;
+                  padding: 0;
+                  color: #fff;
+                  background: #222;
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .skew {
+                  margin-top: -200px;
+                  padding: 200px 0;
+                  transform: skew(0deg, -10deg);
+                  background: #6d1d1d;
+            }
+
+            .content {
+                  text-align: center;
+                  transform: skew(0deg, 10deg);
+                  padding-top: 100px;
+                  padding-bottom: 100px;
+            }
+
+            h1 {
+                  font-weight: lighter;
+                  font-size: 40px;
+            }
+
+            p {
+                  font-weight: lighter;
+                  font-size: 20px;
+            }
+
+            .footer {
+                  padding-top: 300px;
+                  text-align: center;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="skew">
+            <div class="content">
+                  <h1>Skewed background</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quis voluptatem eligendi assumenda
+                        labore illum molestiae id mollitia architecto incidunt, repellendus nihil quasi ipsa, nemo
+                        quaerat. Incidunt delectus odit doloribus.</p>
+            </div>
+      </div>
+      <div class="footer">
+            <p>King Technologies</p>
+      </div>
+</body>
+
+</html>

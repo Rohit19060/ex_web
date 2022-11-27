@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rohit Jain">
+    <title>Css Gradient</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .strips {
+            min-height: 100px;
+            background:
+                linear-gradient(90deg,
+                    #5461c8 12.5%,
+                    #c724b1 0 25%,
+                    #e4002b 0 37.5%,
+                    #ff6900 0 50%,
+                    #f6be00 0 62.5%,
+                    #97d700 0 75%,
+                    #00ab84 0 87.5%,
+                    #00a3e0 0)
+        }
+
+        .hashes {
+            min-height: 100px;
+            background:
+                repeating-linear-gradient(-45deg,
+                    #ccc 0 2px,
+                    transparent 0 9px)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="strips"> </div>
+    <div class="hashes"></div>
+</body>
+
+</html>

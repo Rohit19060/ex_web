@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detect Touch Device</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ae9cff;
+        }
+
+        p {
+            width: 75%;
+            max-width: 550px;
+            background-color: #ffffff;
+            text-align: center;
+            font-size: 2.4em;
+            font-family: "Poppins", sans-serif;
+            padding: 2em 0;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 0.3em;
+            color: #01003e;
+            box-shadow: 0 30px 50px rgba(1, 0, 62, 0.15);
+        }
+
+        span {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="result">Some Demo Text Here</p>
+    <script>
+        let result = document.getElementById("result");
+        const isTouchDevice = () => {
+            try {
+                //We try to create touch event. It would fail for desktops and throw an error.
+                document.createEvent("TouchEvent");
+                result.innerHTML = `It is a <span>Touch</span> device`;
+            } catch (e) {
+                result.innerHTML = `It is a <span>Mouse</span> device`;
+            }
+        };
+        isTouchDevice();
+    </script>
+</body>
+
+</html>

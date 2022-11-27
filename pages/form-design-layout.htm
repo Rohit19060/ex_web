@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Jain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Ordering</title>
+    <style>
+        .bglight .nav {
+            height: 82px;
+            float: right;
+        }
+
+        .bglight ul {
+            list-style: none;
+        }
+
+        .bglight li {
+            margin-top: 26px;
+            display: inline-block;
+        }
+
+        .bglight li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+            padding: 20px 20px;
+            background-color: orangered;
+            display: inline-block;
+            border-radius: 55%;
+        }
+
+        .bglight li a:hover {
+            transition: 0.3s;
+            background: rgba(255, 255, 255, 0.7);
+            color: #000;
+        }
+
+        .bglight .topbanner {
+            padding-top: 150px;
+            margin-left: 30%;
+            color: orangered;
+        }
+
+        .bglight h1 {
+            font-size: 45px;
+            letter-spacing: 5px;
+        }
+
+        .bglight {
+            background-color: rgb(255, 190, 167);
+            color: white;
+            padding: 20px;
+        }
+
+        .forms {
+            background-color: rgba(254, 255, 183, 0.76);
+            border: orangered solid 1px;
+            padding: 10px;
+            float: left;
+            min-width: 600px;
+            margin: 10px;
+        }
+
+        .forms h3 {
+            margin: -10px;
+            padding: 6px;
+            background-color: orangered;
+            color: white;
+        }
+
+        select {
+            margin-left: 40px;
+        }
+
+        .size {
+            max-width: 170px;
+            height: 50px;
+            float: left;
+        }
+
+        .asterisk {
+            padding-left: 10px;
+            color: orangered;
+        }
+
+        .quant {
+            margin-left: 105px;
+        }
+
+        .topp {
+            max-width: 170px;
+            height: 120px;
+            float: left;
+            margin-right: 25px;
+        }
+
+        .dated {
+            margin-right: 65px;
+        }
+
+        .datet {
+            margin-right: 80px;
+        }
+
+        .name {
+            margin-right: 136px;
+        }
+
+        .addr1 {
+            margin-right: 110px;
+        }
+
+        .addr2 {
+            margin-right: 122px;
+        }
+
+        .city {
+            margin-right: 158px;
+        }
+
+        .code {
+            margin-right: 97px;
+        }
+
+        .mob {
+            margin-right: 82px;
+        }
+
+        .email {
+            margin-right: 138px;
+        }
+
+        .fmaster {
+            margin-bottom: 50px;
+        }
+
+        input[type=submit],
+        input[type=reset] {
+            all: unset;
+            color: black;
+            background-color: rgb(233, 225, 225);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 35px;
+            padding-right: 35px;
+            border: gray solid 1px;
+            min-width: 80px;
+            text-align: center;
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .btn {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bglight">
+        <div class="wreapper">
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Directions</a></li>
+                <li><a href="#">Coupons</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Catering</a></li>
+                <li><a href="#">reviews</a></li>
+            </ul>
+            <div class="nav2">
+            </div>
+        </div>
+        <div class="topbanner">
+            <h1>Online Ordering</h1>
+            <h3>Thank you for using our online Ordering from for quick and easy</h3>
+            <h3>orders, delivered free, fast, and hot to your door. If you need to talk</h3>
+            <h3>to us directly, call Red Ball Pizza at (386)555-7499</h3>
+        </div>
+    </div>
+    <div class="asterisk">
+        <h3>Required values are marked by an asterisk (*)</h3>
+    </div>
+    <div class="fmaster">
+        <form method="POST" action="#" name="form" onsubmit="return validation()">
+            <div class="forms">
+                <h3>Delivery Order Form</h3>
+                <br>
+                <label>Choose Your Pizza</label>
+                <select>
+                    <option>Hawaii Chicken</option>
+                    <option>Japanese Chicken</option>
+                    <option>Chinese Chicken</option>
+                </select>
+                <br>
+                <br>
+                <Label class="size">What Size of the Pizza would you like to order?</Label>
+                <div>
+                    <input type="radio" name="size" id="size" value="9.90">
+                    <label>Small - RM 9.90</label><br>
+                    <input type="radio" name="size" id="size" value="18.80">
+                    <label>Medium - RM 18.80</label><br>
+                    <input type="radio" name="size" id="size" value="27.90">
+                    <label>Large - RM 27.90</label>
+                </div>
+                <br>
+                <label>Quantity</label>
+                <input type="tel" name="quant" id=quant class="quant">
+                <br>
+                <br>
+                <label class="topp">Choose your Topping</label>
+                <div>
+                    <input type="checkbox" name="topp" id="topp" value="Extra Cheese">
+                    <label>Extra Cheese</label><br>
+                    <input type="checkbox" name="topp" id="topp" value="Pepperoni">
+                    <label>Pepperoni</label><br>
+                    <input type="checkbox" name="topp" id="topp" value="Mushroom">
+                    <label>Mushroom</label><br>
+                    <input type="checkbox" name="topp" id="topp" value="Green Peppers">
+                    <label>Green Peppers</label><br>
+                    <input type="checkbox" name="topp" id="topp" value="Tomatoes">
+                    <label>Tomatoes</label><br>
+                    <input type="checkbox" name="topp" id="topp" value="Sausage">
+                    <label>Sausage</label><br>
+                </div>
+            </div>
+            <div class="forms">
+                <h3>Delivery Information</h3>
+                <br>
+                <label class="dated">Date of Delivery *</label>
+                <input type="date" name="date" id="date" required>
+                <br>
+                <br>
+                <label class="datet">Delivery Time *</label>
+                <input type="time" name="time" id="time" required>
+                <br>
+                <br>
+                <label class="name">Name *</label>
+                <input type="text" name="fname" id="fname" required>
+                <input type="text" name="lname" id="lname" required>
+                <br>
+                <br>
+                <label class="addr1">Address 1 *</label>
+                <input type="text" name="addr1" id="addr1" required>
+                <br>
+                <br>
+                <label class="addr2">Address 2</label>
+                <input type="text" name="addr2" id="addr2">
+                <br>
+                <br>
+                <label class="city">City</label>
+                <input type="text" name="city" id="city">
+                <br>
+                <br>
+                <label class="code">Postal Code *</label>
+                <input type="tel" name="code" id="code" minlength="6" maxlength="6" required>
+                <br>
+                <br>
+                <label class="mob">Phone number *</label>
+                <input type="tel" name="mob" id="mob" minlength="10" maxlength="11" required>
+                <br>
+                <br>
+                <label class="email">Email *</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="btn"> <input type="submit" value="Place Order">
+                <input type="reset" value="Reset"></div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function validation() {
+            var a = document.getElementById("fname").value;
+            var b = document.getElementById("lname").value;
+            var c = document.getElementById("mob").value;
+            var d = document.getElementById("code").value;
+            if (a == " " || b == " " || c == " " || d == " ") {
+                alert("Form Should not be empty");
+                return false;
+            }
+            if (!isNaN(a) || !isNaN(b) || isNaN(c) || isNaN(d)) {
+                alert("Please Enter Correct Characters");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

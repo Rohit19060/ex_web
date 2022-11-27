@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #ececec;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            height: 120px;
+            width: 250px;
+            box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.65),
+                7px 7px 15px rgba(70, 70, 70, 0.12);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            position: absolute;
+            -webkit-appearance: none;
+            height: 80px;
+            width: 160px;
+            box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.65),
+                7px 7px 15px rgba(70, 70, 70, 0.12),
+                inset -7px -7px 15px rgba(255, 255, 255, 0.65),
+                inset 7px 7px 15px rgba(70, 70, 70, 0.12);
+            border-radius: 40px;
+            border: 5px solid #ececec;
+            left: 15px;
+            outline: none;
+            cursor: pointer;
+
+        }
+
+        input[type="checkbox"]::before,
+        input[type="checkbox"]::after {
+            content: "";
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            transition: 0.3s;
+        }
+
+        input[type="checkbox"]::before {
+            height: 50px;
+            width: 50px;
+            background-color: #ececec;
+            box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.65),
+                7px 7px 15px rgba(70, 70, 70, 0.12);
+            border-radius: 50%;
+            left: 15px;
+        }
+
+        input[type="checkbox"]::after {
+            height: 15px;
+            width: 15px;
+            background-color: #7a7a7a;
+            border-radius: 50%;
+            right: -55px;
+        }
+
+        input[type="checkbox"]:checked::before {
+            left: 86px;
+        }
+
+        input[type="checkbox"]:checked::after {
+            background-color: #55f696;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox">
+    </div>
+</body>
+
+</html>

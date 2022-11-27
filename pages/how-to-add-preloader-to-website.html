@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <meta name="author" content="Rohit Jain">
+      <title>Add Preloader</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+            html,
+            body {
+                  margin: 0;
+                  padding: 0;
+                  width: 100%;
+                  height: 100vh;
+                  background: url("images/Bg.jpg") no-repeat 50% 50%;
+                  background-size: cover;
+            }
+
+            #loader {
+                  position: fixed;
+                  width: 100%;
+                  height: 100vh;
+                  z-index: 1;
+                  overflow: visible;
+                  background: rgba(0, 0, 0, 0) url('images/anim.gif') no-repeat center center;
+            }
+
+            h1 {
+                  position: absolute;
+                  top: 47%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  color: #fff;
+                  font-family: 'Courier New', Courier, monospace;
+            }
+      </style>
+</head>
+
+<body>
+      <div id="loader">
+            <div id="content">
+                  <h1>Gif as a Preloader</h1>
+            </div>
+      </div>
+      <script>
+            var loader;
+            function loadnow(opacity) {
+                  if (opacity <= 0) {
+                        displayContent();
+                  } else {
+                        loader.style.opacity = opacity;
+                        window.setTimeout(function () {
+                              loadnow(opacity - 0.05)
+                        }, 100);
+                  }
+            };
+            function displayContent() {
+                  loader.style.display = 'none';
+                  document.getElementById('content').style.display = 'block';
+            };
+            document.addEventListener("DOMContentLoaded", function () {
+                  loader = document.getElementById('loader');
+                  loadnow(1);
+            });
+      </script>
+</body>
+
+</html>

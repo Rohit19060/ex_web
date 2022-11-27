@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Jain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrallex Effect</title>
+    <style>
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        section {
+            height: 40px;
+        }
+
+        body {
+            color: #FFF;
+            margin: 0;
+            padding: 0;
+            perspective: 1px;
+            transform-style: preserve-3d;
+            height: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            font-family: "Luna";
+        }
+
+        header {
+            box-sizing: border-box;
+            min-height: 100vh;
+            padding: 30vw 0 5vw;
+            position: relative;
+            transform-style: inherit;
+            width: 100vw;
+        }
+
+        header h1 {
+            margin-top: -100px;
+        }
+
+        header,
+        header::before {
+            background: 50% 50% / cover;
+        }
+
+        header::before {
+            bottom: 0;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            background-image: url("images/3.jpg");
+            background-size: cover;
+            transform-origin: center center 0;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+            min-height: 100vh;
+        }
+
+        header * {
+            font-weight: normal;
+            letter-spacing: 0.2em;
+            text-align: center;
+            margin: 0;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Prallax Effect</h1>
+    </header>
+    <section> </section>
+    <section> </section>
+    <section> </section>
+    <section> </section>
+    <section> </section>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Jain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove all Css</title>
+    <style>
+        body {
+            min-height: 100vh;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .button {
+            /* Remove all Predefined CSS */
+            all: unset;
+            display: inline-block;
+            padding: .5em 1.25em;
+            background: steelblue;
+            color: white;
+            box-shadow: 0 12px 12px -6px rgba(black, .5);
+            transform: scale(1);
+            transition: transform ease-in-out 250ms,
+                box-shadow ease-in-out 250ms;
+        }
+
+        .button:hover {
+            transform: scale(1.125);
+            box-shadow: 0 12px 12px -6px rgba(black, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="button" role="button">Button</button>
+</body>
+
+</html>

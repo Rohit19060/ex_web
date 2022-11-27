@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="author" content="Rohit Jain">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Layout Design</title>
+   <style>
+      html {
+         background-color: #0CE876;
+      }
+
+      body {
+         background-color: #00FF33;
+         width: 90%;
+         margin: 0 5% 0 5%;
+         color: darkblue;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #header {
+         background-color: #00FFC6;
+         padding-bottom: 0px;
+         margin-bottom: 2em;
+         border: 1px darkblue solid;
+      }
+
+      img {
+         float: right;
+      }
+
+      #header h1 {
+         text-align: center;
+         font-size: 2em;
+      }
+
+      #header ul {
+         clear: both;
+         list-style: none;
+         background-color: #31316A;
+         border: 3px skyblue solid;
+         border-radius: 0.0em 0.5em 0.5em 0.0em;
+         width: 15%;
+         margin: 0px;
+      }
+
+      ul li {
+         width: 50px;
+         display: inline-block;
+         margin-right: 15px;
+         padding: 5px;
+      }
+
+      ul li:hover {
+         background-color: #0DFFC6;
+      }
+
+      a {
+         text-decoration-line: none;
+         color: white;
+      }
+
+      #section div {
+         border: 1px darkblue solid;
+         background-color: #22EB0C;
+         padding: 10px;
+         margin-bottom: 20px;
+      }
+
+      .floated {
+         width: 50%;
+         float: right;
+         background-color: yellow;
+         font-size: 1.5em;
+         padding: 0.2em;
+         margin-left: 0em 0em 0.5em 0.5em;
+         text-align: right;
+      }
+
+      div p {
+         clear: both;
+         text-justify: auto;
+         font-family: Verdana;
+      }
+
+      #footer {
+         border: 1px darkblue solid;
+         background-color: #22EB0C;
+         padding: 10px;
+         font-size: 0.8em;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="header">
+      <h1>Deitel & Associates, Inc. <img src="Images/Deitel.png" alt="Deitel"></h1>
+      <ul>
+         <li><a href="#">Books</a></li>
+         <li><a href="#">Videos</a></li>
+      </ul>
+   </div>
+   <div id="section">
+      <div>
+         <h3 class="floated">Corporate Training and Authoring</h3>
+         <p> Deitel & Associates, Inc. is an internationally recognized corporate training and authoring organization
+            specializing in programming languages, Internet/web technology, iPhone and Android app development and
+            object technology education. The company provides courses on Java, C++, C#, Visual Basic, C, Internet and
+            web programming, Object Technology and iPhone and Android app development.</p>
+      </div>
+      <div>
+         <h3 class="floated">Programming Books and Videos</h3>
+         <p>Through its publishing partnership with Pearson, Deitel & Associates, Inc. publishes leading-edge
+            programming
+            textbooks, professional books and interactive web-based and DVD LiveLessons video courses.
+         </p>
+      </div>
+   </div>
+   <div id="footer">&copy; Copyright</div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Rohit Jain">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Mouse Coordinates</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+  <h1>Document that reads mouse movement</h1>
+  <h2 id="xcoordinate">0</h2>
+  <h2 id="ycoordinate">0</h2>
+  <script>
+    function readMouseMove(e) {
+      var xcord = document.getElementById("xcoordinate");
+      var ycord = document.getElementById("ycoordinate");
+      xcord.innerHTML = e.clientX;
+      ycord.innerHTML = e.clientY;
+    }
+    document.onmousemove = readMouseMove;
+  </script>
+</body>
+
+</html>

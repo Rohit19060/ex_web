@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <meta name="author" content="Rohit Jain">
+      <title>Cool Link Efect</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+            body {
+                  margin: 0;
+                  padding: 0;
+                  background: blue;
+            }
+
+            .container {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translateX(-50%) translateY(-50%);
+            }
+
+            li {
+                  display: inline-block;
+            }
+
+            li a {
+                  text-decoration: none;
+                  display: inline-block;
+                  color: #fff;
+                  font-family: sans-serif;
+                  font-weight: lighter;
+                  font-size: 28px;
+                  padding: 0 20px;
+            }
+
+            .link::after {
+                  content: '';
+                  display: block;
+                  width: 0;
+                  height: 2px;
+                  background: #fff;
+                  transition: width .3s;
+            }
+
+            .link:hover::after {
+                  width: 100%;
+                  transition: width .3s;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <ol>
+                  <li><a href="#" class="link">Home</a></li>
+                  <li><a href="#" class="link">Search</a></li>
+                  <li><a href="#" class="link">About</a></li>
+                  <li><a href="#" class="link">Contact</a></li>
+            </ol>
+      </div>
+</body>
+
+</html>

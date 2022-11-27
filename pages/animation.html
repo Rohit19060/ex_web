@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Jain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .square {
+            position: relative;
+            height: 100px;
+        }
+
+        .left,
+        .center,
+        .right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+
+        .left {
+            background: red
+        }
+
+        .center {
+            background: yellow
+        }
+
+        .right {
+            background: blue
+        }
+
+
+        .left,
+        .right {
+            width: 20px
+        }
+
+        .left {
+            border-radius: 20px 0 0 20px
+        }
+
+        .right {
+            border-radius: 0 20px 20px 0
+        }
+
+
+        .center {
+            left: 20px;
+            width: 1px;
+            transform: scaleX(60);
+            transform-origin: left;
+        }
+
+        .right {
+            transform: translateX(80px);
+        }
+
+        .center {
+            animation: center-animate 1s ease infinite alternate;
+        }
+
+        .right {
+            animation: right-animate 1s ease infinite alternate;
+        }
+
+        @keyframes right-animate {
+            0% {
+                transform: translateX(140px);
+            }
+
+            100% {
+                transform: translateX(20px);
+            }
+        }
+
+        @keyframes center-animate {
+            0% {
+                transform: scaleX(120);
+            }
+
+            100% {
+                transform: scaleX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>

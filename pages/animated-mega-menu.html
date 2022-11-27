@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <meta name="author" content="Rohit Jain">
+      <title>Animated Mega Menu</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+            * {
+                  margin: 0;
+            }
+
+            .mega {
+                  width: 100%;
+                  height: 300px;
+                  background: #333;
+                  transform: translate3d(0, -310px, 0);
+                  transition: all 1s ease;
+            }
+
+            .mega img {
+                  width: 255px;
+                  height: 100%;
+            }
+
+            .mega ul {
+                  position: absolute;
+                  top: 20%;
+                  left: 50%;
+                  transform: translateX(-50%);
+            }
+
+            .mega ul li {
+                  color: white;
+                  list-style: none;
+                  padding: 10px;
+            }
+
+            .active .mega {
+                  transform: translate3d(0, 0, 0);
+                  transition: all 1s ease;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="mega">
+            <img src="Images/2.png" alt="img">
+            <ul>
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Contact Up</li>
+                  <li>Support</li>
+                  <li>Our Work</li>
+            </ul>
+      </div>
+      <button class="toggle">Mega menu</button>
+      <script>
+            var body = document.body;
+            var tag = document.querySelector('.toggle');
+            tag.addEventListener('click', function (e) {
+                  body.classList.toggle('active');
+                  e.preventDefault();
+            });
+      </script>
+</body>
+
+</html>

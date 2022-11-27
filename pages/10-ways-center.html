@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Jain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Element</title>
+    <style>
+        .father {
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+        /* Absolute + Negative Margin (1st Method)
+        .father {
+            position: relative;
+        }         
+         .child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+        }       */
+        /* Absolute + Calc  (2nd Method)
+        .father {
+            position: relative;
+        }        .child {
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+        }*/
+        /*Absolute + Transform (3rd Method)
+        .father {
+            position: relative;
+        }        .child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } */
+        /* Absolute + Margin Auto (4th Method)        .father {
+            position: relative;
+        }        .child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;        }
+        This method doesn’t require that we know the width and height of the child elements.
+        */
+        /* Text-align  (5th Method)
+        .father {
+            line-height: 300px;
+            text-align: center;
+            font-size: 0px;
+        }        .child {
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: initial;
+            text-align: left;
+        } */
+        /* table method (6th Method)
+        .father {
+            text-align: center;
+        }        .child {
+            display: inline-block;
+        }*/
+        /* css table (7th Method)
+        .father {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }        .child {
+            display: inline-block;
+        }*/
+        /* flex (8th Method) */
+        .father {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Grid (9th Method)
+        .father {
+            display: grid;
+        }
+        .child {
+            align-self: center;
+            justify-self: center;
+        }*/
+        /* Writing-mode + Text-align  (10th Method)
+        .father {
+            writing-mode: vertical-lr;
+            text-align: center;
+        }        .middle {
+            writing-mode: horizontal-tb;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }        .child {
+            display: inline-block;
+            margin: auto;
+            text-align: left;
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="child">Hellow World</div>
+    </div>
+    <!-- Writing-mode + Text-align
+    <div class="father">
+        <div class="middle">
+            <div class="child">hello world</div>
+        </div>
+    </div>
+ -->
+    <!-- table method 
+    <table>
+        <tbody>
+            <tr>
+                <td class="father">
+                    <div class="child">hello world</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>-->
+</body>
+
+</html>

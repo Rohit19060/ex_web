@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="author" content="Rohit Jain">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Image Slider</title>
+</head>
+
+<body>
+      <div>
+            <button onclick="prev()">Prev</button>
+            <figure> <img id="slider" src="Images/1.jpg" width="100%" height="100%" alt="iamges" />
+                  <figcaption>Sea Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium repellat
+                        consectetur
+                        placeat aspernatur beatae excepturi non inventore ullam obcaecati blanditiis, impedit amet,
+                        consequatur sit eius magnam repellendus necessitatibus molestias deserunt!</figcaption>
+            </figure>
+            <button onclick="next()">Next</button>
+      </div>
+      <script>
+            var images = ["Images/1.jpg", "Images/2.jpg", "Images/3.jpg"];
+            var num = 0; function next() {
+                  var slider = document.getElementById("slider");
+                  num++;
+                  if (num >= images.length) {
+                        num = 0;
+                  }
+                  slider.src = images[num]
+            }
+            function prev() {
+                  var slider = document.getElementById("slider")
+                  num--;
+                  if (num < 0) {
+                        num = images.length - 1;
+                  }
+                  slider.src = images[num];
+            }
+      </script>
+</body>
+
+</html>

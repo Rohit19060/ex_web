@@ -1,0 +1,22 @@
+<!Doctype Html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8" />
+      <meta name="author" content="Rohit Jain">
+      <title>Button Sound Effect</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+      <nav>
+            <a href="#" onmousedown="bleep.play()">Play</a><br>
+            <a href="#" onmousedown="bleep.pause()">Pause</a>
+      </nav>
+      <script>
+            var bleep = new Audio();
+            bleep.src = "audio/i-am-the-raja.mp3";
+      </script>
+</body>
+
+</html>

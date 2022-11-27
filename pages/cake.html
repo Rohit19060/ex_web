@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eac285;
+        }
+
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: white;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 8px;
+            box-shadow: 0 20px 45px rgba(120, 76, 10, 0.25);
+        }
+
+        .cake {
+            width: 100%;
+            position: absolute;
+            bottom: 60px;
+        }
+
+        .bottom-layer,
+        .top-layer,
+        .middle-layer {
+            height: 80px;
+            width: 240px;
+            position: relative;
+            margin: auto;
+            background-repeat: repeat;
+            background-size: 100% 100%, 60px 100px;
+            background-position: 28px 0;
+            background-image: linear-gradient(transparent 50px,
+                    #e3a953 50px,
+                    #e3a953 60px,
+                    transparent 60px), radial-gradient(circle at 30px 5px, #713e16 30px, #eac284 31px);
+        }
+
+        .middle-layer {
+            transform: scale(0.85);
+            top: 72px;
+            animation: rise-1 2s forwards;
+        }
+
+        @keyframes rise-1 {
+            100% {
+                top: 7px;
+            }
+        }
+
+        .top-layer {
+            transform: scale(0.7);
+            top: 144px;
+            animation: rise-2 2s 2s forwards;
+        }
+
+        @keyframes rise-2 {
+            100% {
+                top: 26px;
+            }
+        }
+
+        .candle {
+            background: repeating-linear-gradient(45deg,
+                    #fd3018 0,
+                    #fd3018 5px,
+                    #ffa89e 5px,
+                    #ffa89e 10px);
+            height: 45px;
+            width: 15px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            animation: rise-3 1s 4s forwards;
+        }
+
+        @keyframes rise-3 {
+            100% {
+                bottom: 202px;
+            }
+        }
+
+        .candle:after {
+            content: "";
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            background-color: #ffee54;
+            border-radius: 0 50% 50% 50%;
+            transform: scale(0) rotate(45deg);
+            bottom: 50px;
+            left: -0.5px;
+            animation: flame 1.5s 5s forwards;
+        }
+
+        @keyframes flame {
+            100% {
+                transform: scale(1) rotate(45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cake">
+            <div class="candle"></div>
+            <div class="top-layer"></div>
+            <div class="middle-layer"></div>
+            <div class="bottom-layer"></div>
+        </div>
+    </div>
+</body>
+
+</html>

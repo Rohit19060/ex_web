@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Jain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        .container {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .item {
+            position: relative;
+            display: block;
+            flex: 1 1 0px;
+            transition: transform 500ms;
+        }
+
+        .container:focus-within .item,
+        .container:hover .item {
+            transform: translateX(-25%);
+        }
+
+        .item:focus~.item,
+        .item:hover~.item {
+            transform: translateX(25%);
+        }
+
+        .container .item:focus,
+        .container .item:hover {
+            transform: scale(1.5);
+            z-index: 1;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .item img {
+            display: block;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="#animals" class="item"><img src="Images/1.jpg" alt="Animals"></a>
+        <a href="#architecture" class="item"><img src="Images/2.jpg" alt="Architecture"></a>
+        <a href="#nature" class="item"><img src="Images/3.jpg" alt="Nature"></a>
+        <a href="#people" class="item"><img src="Images/4.jpg" alt="People"></a>
+        <a href="#tech" class="item"><img src="Images/5.jpg" alt="Tech"></a>
+    </div>
+</body>
+
+</html>
