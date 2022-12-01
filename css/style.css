@@ -18,23 +18,29 @@ main {
   grid-gap: 1rem;
   margin: 10px;
 }
+
 main .card {
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 14px rgba(69, 179, 253, 0.4);
+  box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 40%);
   transition: transform 0.2s;
   text-decoration: none;
   color: black;
   padding: 1rem;
 }
+
 main .card:hover {
   background-color: rgba(245, 245, 245, 0.8470588235);
   transform: translateY(-2px);
 }
+
 main .card:active {
   background-color: white;
   transform: translateY(2px);
 }
+
 main .card p {
   color: rgb(59, 59, 59);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
