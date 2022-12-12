@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Trail Effect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111;
+            overflow: hidden;
+        }
+
+        span {
+            position: absolute;
+            pointer-events: none;
+            animation: animate 1s linear forwards;
+            font-size: 35px;
+        }
+
+        @keyframes animate {
+
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let index = 0;
+        let images = ['🚵‍♂️', '🤹‍♀️', '🚴‍♂️', '👑', '🏂', '🐔', '🤸‍♀️', '🦊', '🚴‍♀️', '😲', '🦑', '🪲', '🐉', '🤹‍♂️', '🤖', '😇', '🦄', '🐦', '🐳', '👺', '🙁', '⛷️', '🤡', '🦀', '🐿️', '🐯']
+        document.addEventListener("mousemove", function (e) {
+            let body = document.querySelector("body");
+            let emoji = document.createElement("span");
+            emoji.style.left = e.offsetX + "px";
+            emoji.style.top = e.offsetY + "px";
+            emoji.innerText = images[Math.floor(Math.random() * images.length)];
+            body.appendChild(emoji);
+            setTimeout(function () {
+                emoji.remove();
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>

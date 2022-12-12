@@ -70,6 +70,7 @@ let cardArr = [
     new Card("./pages/layout-design-6.html", "Layout Design", "Layout Design 6"),
     new Card("./pages/loading-screen.html", "Loading Screen", "Loading Screen"),
     new Card("./pages/my-calculator.html", "My Calculator", "My Calculator"),
+    new Card("./pages/mouse_trail.html", "Mouse Trail", "Mouse Trail"),
     new Card("./pages/netflix.html", "Netflix", "Netflix"),
     new Card("./pages/otp_input.html", "Otp Input", "Otp Input"),
     new Card("./pages/parallax-effect.html", "Parallax Effect", "Parallax Effect"),
@@ -116,7 +117,7 @@ function createCard(card) {
     cardElement.title = card.title;
     cardElement.target = "_blank";
     cardElement.innerHTML = `<strong>${card.title}</strong><p>${card.description}</p>`;
- 
+
     return cardElement;
 }
 
