@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  margin: 0;
+  padding-bottom: 1120px;
   font-family: "Montserrat";
 }
 
@@ -15,32 +15,27 @@ h1 {
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 1.4rem;
   margin: 10px;
+  padding-bottom: 20px;
 }
-
 main .card {
-  padding: 30px;
   border-radius: 15px;
-  box-shadow: 1px 1px 10px 0px rgb(69 179 253 / 40%);
+  box-shadow: 1px 1px 10px 0px rgba(69, 179, 253, 0.4);
+  background-image: linear-gradient(138deg, rgba(37, 200, 241, 0.9), rgba(199, 246, 208, 0.6));
   transition: transform 0.2s;
   text-decoration: none;
   color: black;
-  padding: 1rem;
+  padding: 1.4rem;
 }
-
 main .card:hover {
-  background-color: rgba(245, 245, 245, 0.8470588235);
   transform: translateY(-2px);
+  background-image: linear-gradient(138deg, rgba(107, 221, 250, 0.9), rgba(37, 200, 241, 0.9));
 }
-
 main .card:active {
-  background-color: white;
+  background-image: linear-gradient(138deg, white, rgba(199, 246, 208, 0.6));
   transform: translateY(2px);
 }
-
 main .card p {
   color: rgb(59, 59, 59);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
