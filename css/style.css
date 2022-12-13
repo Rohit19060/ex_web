@@ -1,28 +1,31 @@
 body,
 html {
-  height: 100%;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 24px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  padding-bottom: 1120px;
-  font-family: "Montserrat";
+.header {
+  padding: 2rem;
 }
 
 h1 {
-  margin: 5rem;
+  text-align: center;
 }
 
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  grid-gap: 1.4rem;
-  margin: 10px;
-  padding-bottom: 20px;
+  grid-gap: 1rem;
+  margin: 50px 10px;
+  text-decoration: none;
+  padding-bottom: 5%;
 }
 main .card {
   border-radius: 15px;
   box-shadow: 1px 1px 10px 0px rgba(69, 179, 253, 0.4);
-  background-image: linear-gradient(138deg, rgba(37, 200, 241, 0.9), rgba(199, 246, 208, 0.6));
   transition: transform 0.2s;
   text-decoration: none;
   color: black;
@@ -30,12 +33,53 @@ main .card {
 }
 main .card:hover {
   transform: translateY(-2px);
-  background-image: linear-gradient(138deg, rgba(107, 221, 250, 0.9), rgba(37, 200, 241, 0.9));
+  box-shadow: 1px 1px 10px 0px rgba(69, 179, 253, 0.2);
 }
 main .card:active {
-  background-image: linear-gradient(138deg, white, rgba(199, 246, 208, 0.6));
   transform: translateY(2px);
+  box-shadow: none;
 }
 main .card p {
+  margin: 0;
+  padding: 0;
   color: rgb(59, 59, 59);
+}
+
+.github-corner:hover .github-arm {
+  -webkit-animation: github-wave 560ms ease-in-out;
+          animation: github-wave 560ms ease-in-out;
+}
+
+@-webkit-keyframes github-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes github-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .github-arm {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .github-corner .github-arm {
+    -webkit-animation: github-wave 560ms ease-in-out;
+            animation: github-wave 560ms ease-in-out;
+  }
 }/*# sourceMappingURL=style.css.map */

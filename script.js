@@ -116,7 +116,7 @@ function createCard(card) {
     cardElement.className = "card";
     cardElement.title = card.title;
     cardElement.target = "_blank";
-    cardElement.innerHTML = `<strong>${card.title}</strong><p>${card.description}</p>`;
+    cardElement.innerHTML = `<h3>${card.title}</h3><p>${card.description}</p>`;
 
     return cardElement;
 }
