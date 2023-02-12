@@ -32,7 +32,7 @@
         <figcaption>Level <input type="level" id="level" value="1" /></figcaption>
     </figure>
     <div class="center">
-        <img src="Images/1.png" id="psyduck" alt="psyduck" height="64px">
+        <img src="images/1.png" id="psyduck" alt="psyduck" height="64px">
     </div>
     <script>
         function increase() {
@@ -43,7 +43,7 @@
             Level.value++;
             if (Level.value > 16) {
                 var x = document.getElementById("psyduck");
-                x.setAttribute("src", "Images/2.png");
+                x.setAttribute("src", "images/2.png");
             }
         }
         function decrease() {
@@ -53,10 +53,10 @@
             var Level = document.getElementById("level");
             Level.value--;
             var x = document.createElement("IMG");
-            x.setAttribute("src", "Images/1.png");
+            x.setAttribute("src", "images/1.png");
             if (Level.value <= 16) {
                 var x = document.getElementById("psyduck");
-                x.setAttribute("src", "Images/1.png");
+                x.setAttribute("src", "images/1.png");
             }
         }
         var current_rotation = 0;

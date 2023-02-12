@@ -266,25 +266,11 @@
                 <input type="email" name="email" id="email" required>
             </div>
             <div class="btn"> <input type="submit" value="Place Order">
-                <input type="reset" value="Reset"></div>
+                <input type="reset" value="Reset">
+            </div>
         </form>
     </div>
-    <script type="text/javascript">
-        function validation() {
-            var a = document.getElementById("fname").value;
-            var b = document.getElementById("lname").value;
-            var c = document.getElementById("mob").value;
-            var d = document.getElementById("code").value;
-            if (a == " " || b == " " || c == " " || d == " ") {
-                alert("Form Should not be empty");
-                return false;
-            }
-            if (!isNaN(a) || !isNaN(b) || isNaN(c) || isNaN(d)) {
-                alert("Please Enter Correct Characters");
-                return false;
-            }
-        }
-    </script>
+    <script type="text/javascript" src="script.ts"></script>
 </body>
 
 </html>

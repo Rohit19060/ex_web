@@ -70,7 +70,7 @@
 
 <body>
     <div class="form_container">
-        <h1>Select the hexadecimal Color: <span id="SelectColor"> for Verifications!</span></h1>
+        <h1>Select the hexadecimal Color: <span id="SelectColor"></span> for Verifications!</h1>
         <input type="checkbox" name="checkbox" id="checkbox">
         <label for="checkbox">Are you Human?</label>
     </div>
@@ -85,38 +85,7 @@
         <div class="element"></div>
         <div class="element"></div>
     </main>
-    <script>
-        const checkbox = document.querySelector("#checkbox");
-        const elements = document.querySelectorAll(".element");
-        const selectColor = document.querySelector("#SelectColor");
-
-        let letters = "0123456789ABCDEF";
-        let colors = [];
-
-        checkbox.disabled = true;
-
-        elements.forEach((x) => {
-            let color = "#";
-            for (let index = 0; index < 6; index++) {
-                color += letters[Math.floor(Math.random() * letters.length)]
-            }
-            x.style.backgroundColor = color;
-            x.innerHTML = color;
-            x.addEventListener("click", () => {
-                if (x.innerHTML === selectColor.innerHTML) {
-                    checkbox.checked = true;
-                    alert("You are Human");
-                    location.reload();
-                } else {
-                    alert("Please Verify You are a Human");
-                    location.reload();
-                }
-            });
-            colors.push(color);
-        });
-
-        selectColor.innerHTML = colors[Math.floor(Math.random() * colors.length)];
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

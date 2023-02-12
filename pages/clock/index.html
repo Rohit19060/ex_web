@@ -62,55 +62,11 @@
 </head>
 
 <body>
-
     <main class="clock-container">
         <div id="displayClock" class="clock"> Display Time</div>
         <div id="user" class="user">User</div>
     </main>
-
-    <script>
-        function showTime() {
-            const userName = "Rohit Jain";
-            const user = document.querySelector("#user");
-            let date = new Date();
-            let h = date.getHours();
-            let m = date.getMinutes();
-            let s = date.getSeconds();
-            let session = "AM";
-            let bg;
-
-            if (h == 0) h = 12;
-            if (h > 12) {
-                h = h - 12;
-                session = "PM";
-            }
-
-            h = h < 10 ? (h = "0" + h) : h;
-            m = m < 10 ? (m = "0" + m) : m;
-            s = s < 10 ? (s = "0" + s) : s;
-
-            if (h < 8 && session === "AM") {
-                bg = `url()`;
-                user.innerHTML = `Good Morning ${userName}`;
-            } else if (h < 11 && session === "AM") {
-                bg = `url()`;
-                user.innerHTML = `Good Day ${userName}`;
-            } else if (h < 8 && session === "PM") {
-                bg = `url()`;
-                user.innerHTML = `Good afternoon ${userName}`;
-            } else {
-                bg = `url()`;
-                user.innerHTML = `Good afternoon ${userName}`;
-            }
-
-            document.querySelector("#displayClock").innerHTML = `${h}:${m}<small>.${s}|${session}</small>`;
-            document.querySelector("body").style.background = `${bg} center/cover`;
-            setTimeout(showTime, 1000);
-        }
-
-        showTime()
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+var acc = document.getElementsByClassName("accordion");
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", toggleAccordion);
+}
+
+function toggleAccordion(e: Event) {
+  const target = e.currentTarget as HTMLButtonElement;
+  target.classList.toggle("active");
+  var panel = target.nextElementSibling as HTMLElement;
+  if (panel.style.maxHeight && panel.style.maxHeight != "0px") {
+    panel.style.maxHeight = "0px";
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+}

@@ -23,6 +23,7 @@ main {
   text-decoration: none;
   padding-bottom: 5%;
 }
+
 main .card {
   border-radius: 15px;
   box-shadow: 1px 1px 10px 0px rgba(69, 179, 253, 0.4);
@@ -31,14 +32,17 @@ main .card {
   color: black;
   padding: 1.4rem;
 }
+
 main .card:hover {
   transform: translateY(-2px);
   box-shadow: 1px 1px 10px 0px rgba(69, 179, 253, 0.2);
 }
+
 main .card:active {
   transform: translateY(2px);
   box-shadow: none;
 }
+
 main .card p {
   margin: 0;
   padding: 0;
@@ -46,40 +50,31 @@ main .card p {
 }
 
 .github-corner:hover .github-arm {
-  -webkit-animation: github-wave 560ms ease-in-out;
-          animation: github-wave 560ms ease-in-out;
-}
-
-@-webkit-keyframes github-wave {
-  0%, 100% {
-    transform: rotate(0);
-  }
-  20%, 60% {
-    transform: rotate(-25deg);
-  }
-  40%, 80% {
-    transform: rotate(10deg);
-  }
+  animation: github-wave 560ms ease-in-out;
 }
 
 @keyframes github-wave {
   0%, 100% {
     transform: rotate(0);
   }
+
   20%, 60% {
     transform: rotate(-25deg);
   }
+
   40%, 80% {
     transform: rotate(10deg);
   }
 }
+
 @media (max-width: 500px) {
   .github-corner:hover .github-arm {
-    -webkit-animation: none;
-            animation: none;
+    animation: none;
   }
+
   .github-corner .github-arm {
-    -webkit-animation: github-wave 560ms ease-in-out;
-            animation: github-wave 560ms ease-in-out;
+    animation: github-wave 560ms ease-in-out;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

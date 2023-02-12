@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-      <meta charset="utf-8">
-      <meta name="author" content="Rohit Jain">
-      <title>Cool Link Efect</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8" />
+      <meta name="author" content="Rohit Jain" />
+      <title>Cool Link Effect</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <style>
             body {
                   margin: 0;
                   padding: 0;
-                  background: blue;
+                  background: rgb(37, 37, 37);
             }
 
             .container {
@@ -35,17 +35,17 @@
             }
 
             .link::after {
-                  content: '';
+                  content: "";
                   display: block;
                   width: 0;
                   height: 2px;
                   background: #fff;
-                  transition: width .3s;
+                  transition: width 0.3s;
             }
 
             .link:hover::after {
                   width: 100%;
-                  transition: width .3s;
+                  transition: width 0.3s;
             }
       </style>
 </head>
