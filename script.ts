@@ -454,7 +454,8 @@ const cardArr: Card[] = [
   },
 ];
 
-function createCard(e: Card) {
+function createCard(e: Card)
+{
   let card = document.createElement("a");
   card.href = e.url;
   card.className = "card";
@@ -464,8 +465,22 @@ function createCard(e: Card) {
   return card;
 }
 
+let searchELE = document.getElementById("search") as HTMLInputElement;
+searchELE.addEventListener("input", (e) =>
+{
+  let search = (e.target as HTMLInputElement).value;
+  let newCardArr = cardArr.filter((card) => card.title.toLowerCase().includes(search.toLowerCase()));
+  let main = document.querySelector("main") as HTMLElement;
+  main.innerHTML = "";
+  newCardArr.forEach((card) =>
+  {
+    main.appendChild(createCard(card));
+  });
+});
+
 let main = document.createElement("main");
-cardArr.forEach((card) => {
+cardArr.forEach((card) =>
+{
   main.appendChild(createCard(card));
 });
 document.body.appendChild(main);

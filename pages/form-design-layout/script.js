@@ -1,6 +1,7 @@
+"use strict";
 function validation() {
     var aEle = document.getElementById("fname");
-    var a = aEle.value;
+    let a = aEle.value;
     var bEle = document.getElementById("lname");
     var b = bEle.value;
     var cEle = document.getElementById("mob");
@@ -25,3 +26,4 @@ function validation() {
         return false;
     }
 }
+//# sourceMappingURL=script.js.map

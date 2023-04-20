@@ -1,7 +1,8 @@
+"use strict";
 function Validation() {
-    var form = document.getElementById("form");
-    var emailEle = document.getElementById("email");
-    var email = emailEle.value;
+    const form = document.getElementById("form");
+    const emailEle = document.getElementById("email");
+    const email = emailEle.value;
     var text = document.getElementById("text");
     var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     if (email.match(pattern)) {
@@ -23,3 +24,4 @@ function Validation() {
         text.style.color = "#00ff00";
     }
 }
+//# sourceMappingURL=script.js.map

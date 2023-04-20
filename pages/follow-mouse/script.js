@@ -1,3 +1,4 @@
+"use strict";
 var $ = document.querySelector.bind(document);
 var $on = document.addEventListener.bind(document);
 var xmouse = 0, ymouse = 0;
@@ -28,3 +29,4 @@ var followMouse = function followMouse() {
     ball.style.left = x + "px";
     ball.style.top = y + "px";
 };
+//# sourceMappingURL=script.js.map
