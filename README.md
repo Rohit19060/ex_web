@@ -64,7 +64,7 @@ git clone https://github.com/Rohit19060/ex_web.git
 
 ## 🎊 Future Updates
 
-- [ ] Update Documentation
+- [x] Update Documentation
 
 ## 🧑🏻 Author
 
