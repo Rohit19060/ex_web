@@ -242,6 +242,11 @@ const cardArr: Card[] = [
     description: "Image Slider",
   },
   {
+    url: "./pages/image-upload.html",
+    title: "Image Upload",
+    description: "Image Upload & Show Image Preview",
+  },
+  {
     url: "./pages/input-type.html",
     title: "Input Type",
     description: "Input Type",

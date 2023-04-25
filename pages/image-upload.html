@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div>
+        <label
+            class="flex flex-col items-center p-4 mx-auto mt-4 bg-white rounded-lg shadow-lg cursor-pointer w-80 text-blue hover:bg-blue-500 hover:text-white">
+            <div class="rounded-lg preview">
+                <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path
+                        d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                </svg>
+            </div>
+            <span class="px-5 text-base leading-normal preview-text"> Select a file </span>
+            <input type='file' id="icon" name="icon" accept=".jpg, .jpeg, .png" class="hidden" />
+        </label>
+    </div>
+    <script>
+        const input = document.querySelector('#icon');
+        const preview = document.querySelector('.preview');
+        const previewText = document.querySelector('.preview-text');
+        input.style.opacity = 0;
+        input.addEventListener('change', updateImageDisplay);
+
+        function updateImageDisplay()
+        {
+            preview.removeChild(preview.children[0]);
+            if (input.files.length === 0)
+            {
+                previewText.textContent = 'No files currently selected for upload';
+            } else
+            {
+                const curFile = input.files[0];
+                previewText.textContent = `${curFile.name}, Size: ${returnFileSize(curFile.size)}.`;
+                const image = document.createElement('img');
+                image.src = URL.createObjectURL(curFile);
+                image.classList.add('h-48', 'w-full', 'object-cover', 'md:h-full', 'md:w-48', 'rounded-lg');
+                preview.appendChild(image);
+            }
+        }
+
+        function returnFileSize(number)
+        {
+            if (number < 1024)
+            {
+                return number + 'bytes';
+            } else if (number >= 1024 && number < 1048576)
+            {
+                return (number / 1024).toFixed(1) + 'KB';
+            } else if (number >= 1048576)
+            {
+                return (number / 1048576).toFixed(1) + 'MB';
+            }
+        }
+    </script>
+</body>
+
+</html>
