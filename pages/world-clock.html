@@ -61,42 +61,51 @@
 
     <script>
         document.getElementById("checkTime").value = new Date().toLocaleTimeString().substring(0, 5);
-        const putZero = (value) => {
-            // console.log(value);
-            if (parseInt(value) <= 9) {
+        const putZero = (value) =>
+        {
+            if (parseInt(value) <= 9)
+            {
                 return `0${value}`
-            } else {
+            } else
+            {
                 return value
             }
         }
-        const check = (checkTime, diff, sign) => {
+        const check = (checkTime, diff, sign) =>
+        {
             let hours = 0;
             let minutes = 0;
             let d = new Date();
             checkTime = new Date(d.toString().split(":")[0].slice(0, -2) + checkTime);
             diff = new Date(d.toString().split(":")[0].slice(0, -2) + diff);
-            if (sign === "positive") {
+            if (sign === "positive")
+            {
                 hours = (checkTime.getHours() + diff.getHours()) % 23
                 minutes = checkTime.getMinutes() + diff.getMinutes()
-                if (minutes >= 60) {
+                if (minutes >= 60)
+                {
                     minutes %= 60;
                     hours++;
                 }
                 return { hours, minutes }
-            } else {
+            } else
+            {
                 minutes = (checkTime - diff) / 60000;
                 hours = Math.floor(minutes / 60);
-                if (hours >= 0) {
+                if (hours >= 0)
+                {
                     minutes %= 60;
                     return { hours, minutes }
-                } else if (hours < 0) {
+                } else if (hours < 0)
+                {
                     hours = 24 + Math.floor(minutes / 60);
                     minutes = (minutes % 60) + 60;
                     return { hours, minutes }
                 }
             }
         }
-        const changeCall = () => {
+        const changeCall = () =>
+        {
             let checkTime = document.getElementById("checkTime").value
             let diff = document.getElementById("diff").value
             let sign = document.getElementById("sign").value
