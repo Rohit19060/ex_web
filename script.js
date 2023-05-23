@@ -686,6 +686,20 @@ const cardArr = [
         updated_at: new Date("2023-05-20"),
         description: "Individual Transform",
     },
+    {
+        url: "./pages/group_hover.html",
+        title: "Group Hover",
+        created_at: new Date("2023-05-23"),
+        updated_at: new Date("2023-05-23"),
+        description: "Group Hover",
+    },
+    {
+        url: "./pages/dropdown_tailwind.html",
+        title: "Dropdown Tailwind",
+        created_at: new Date("2023-05-23"),
+        updated_at: new Date("2023-05-23"),
+        description: "Dropdown Tailwind",
+    },
 ];
 function createCard(e) {
     let card = document.createElement("a");
