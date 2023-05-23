@@ -692,9 +692,15 @@ function createCard(e) {
     card.href = e.url;
     card.className = "card";
     card.title = e.title;
-    card.target = "_blank";
-    card.innerHTML =
-        `<h3>${e.title}</h3><p>${e.description}</p><p>Created at ${e.created_at.toLocaleDateString()}</p>`;
+    card.innerHTML = `
+  <div>
+    <h3>${e.title}</h3>
+    <h5>${e.description}</h5>
+    <p>Created at ${e.created_at.toLocaleDateString()}</p>
+</div>
+<div class="upper_card">
+    <a href="https://github.com/Rohit19060/ex_web/blob/main/${e.url.replace(".", "")}" target="_blank" class="btn">Code</a>
+</div>`;
     return card;
 }
 let searchELE = document.getElementById("search");
