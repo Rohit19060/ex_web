@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Queries</title>
+    <style>
+        .card-container {
+            container-type: inline-size;
+            container-name: card-container;
+        }
+
+        .card {
+            background: linear-gradient(45deg, #f3f3f3, #fff);
+            background-color: blue;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+        }
+
+        @container (max-width:400px) {
+            .card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @container card-container (max-width:400px) {
+            .card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* cqw
+        cqh
+        cqi
+        cqb
+        cqmin
+        cqmax
+        */
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Testing Card h3</h3>
+            <h4>Testing Card h4</h4>
+        </div>
+        <div class="card">
+            <h3>Testing Card h3</h3>
+            <h4>Testing Card h4</h4>
+        </div>
+        <div class="card">
+            <h3>Testing Card h3</h3>
+            <h4>Testing Card h4</h4>
+        </div>
+    </div>
+    <script>
+        let cardContainer = document.querySelector('.card-container');
+        cardContainer.addEventListener('keyup', () =>
+        {
+            console.log('cardContainer', cardContainer);
+        });
+    </script>
+</body>
+
+</html>

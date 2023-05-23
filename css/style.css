@@ -111,3 +111,16 @@ main {
 .text-center {
   text-align: center;
 }
+
+.github-svg {
+  fill: #151513;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+}
+
+.github-svg path {
+  transform-origin: 130px 106px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web updates</title>
+</head>
+
+<body>
+    <script>
+        const original = {
+            id: 0,
+            prop: {
+                name: "Tom"
+            }
+        }
+
+        const deepCopy = JSON.parse(JSON.stringify(original))
+
+        // Now you can do this
+        const deepCopy2 = structuredClone(original)
+
+        console.log(deepCopy)
+    </script>
+</body>
+
+</html>

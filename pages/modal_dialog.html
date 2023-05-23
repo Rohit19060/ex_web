@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal - Dialog</title>
+</head>
+
+<body>
+    <dialog id="d">
+        <form method="dialog">
+            <h1>Modal Dialog</h1>
+            <p>Modal Dialogs force users to interact with them before continuing. They are used for urgent or important
+                information and require acknowledgement from the user.</p>
+            <menu>
+                <button type="button" id="close" value="close" onclick="d.close()">Close</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <button type="button" onclick="d.show()">Open Dialog</button>
+
+</body>
+
+</html>
