@@ -6,17 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dropdown Using Tailwind</title>
+    <link rel="shortcut icon" href="https://kingtechnologies.dev/assets/images/Logo.webp" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <nav className="flex sm:justify-center space-x-4">
-        <ul class="flex gap-4">
+    <nav class="flex items-center justify-between gap-2 px-10 bg-white shadow-lg lg:px-20 card">
+        <div class="flex items-center">
+            <svg stroke="currentcolor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"
+                class="w-8 h-8 lg:hidden" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h8m-8 6h16"></path>
+            </svg>
+            <img src="https://kingtechnologies.dev/assets/images/Logo.webp" alt="logo" width="80px" class="p-2 py-4" />
+        </div>
+        <ul class="items-center hidden gap-5 lg:flex justify-evenly">
             <li>Home</li>
-            <li>Clothing</li>
-            <li>Accessories</li>
+            <li class="relative py-10 group/projects">
+                Projects
+                <div
+                    class="absolute items-center justify-center hidden gap-5 px-8 py-6 text-black   bg-white shadow group-hover/projects:flex hover:flex top-24">
+                    <div class="pr-10">
+                        <h2 class="font-bold">JavaScript</h2>
+                        <ul class="flex flex-col">
+                            <li><a href="#">Calculator</a></li>
+                            <li><a href="#">Clock</a></li>
+                            <li><a href="#">Color Flipper</a></li>
+                            <li><a href="#">Counter</a></li>
+                            <li><a href="#">Grocery Bud</a></li>
+                            <li><a href="#">Lorem Ipsum</a></li>
+                            <li><a href="#">Modal</a></li>
+                            <li><a href="#">Navbar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>Blogs</li>
+            <li>Articles</li>
         </ul>
-
     </nav>
 </body>
 
