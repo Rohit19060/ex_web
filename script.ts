@@ -707,6 +707,13 @@ const cardArr: Card[] = [
     updated_at: new Date("2023-05-23"),
     description: "Dropdown Tailwind",
   },
+  {
+    url: "./pages/small_menu.html",
+    title: "Small Menu",
+    description: "Small Menu",
+    created_at: new Date("2023-05-25"),
+    updated_at: new Date("2023-05-25"),
+  },
 ];
 
 function createCard(e: Card) {

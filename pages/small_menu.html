@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="flex items-stretch justify-center">
+        <div class="flex flex-col">
+            <button onclick="changeMenu('firstMenu')" title="First Menu"
+                class="px-10 py-4 text-white bg-sky-500 btn">First Menu</button>
+            <button onclick="changeMenu('secondMenu')" title="Second Menu btn"
+                class="px-10 py-4 text-white bg-sky-500 btn">Second Menu</button>
+            <button onclick="changeMenu('thirdMenu')" title="Third Menu btn"
+                class="px-10 py-4 text-white bg-sky-500 btn">Third Menu</button>
+            <button onclick="changeMenu('forthMenu')" title="Fourth Menu btn"
+                class="px-10 py-4 text-white bg-sky-500 btn">Fourth Menu</button>
+            <button onclick="changeMenu('fifthMenu')" title="Fifth Menu btn"
+                class="px-10 py-4 text-white bg-sky-500 btn">Fifth Menu</button>
+            <button onclick="changeMenu('sixthMenu')" title="Sixth Menu "
+                class="px-10 py-4 text-white bg-sky-500 btn">Sixth Menu</button>
+        </div>
+        <div class="p-10 text-black bg-white w-96 menu" id="firstMenu">
+            <div>First Menu</div>
+        </div>
+        <div class="hidden p-10 text-black bg-white shadown w-96 menu" id="secondMenu">Second Menu</div>
+        <div class="hidden p-10 text-black bg-white w-96 menu" id="thirdMenu">Third Menu</div>
+        <div class="hidden p-10 text-black bg-white w-96 menu" id="forthMenu">Fourth Menu</div>
+        <div class="hidden p-10 text-black bg-white w-96 menu" id="fifthMenu">Fifth Menu</div>
+        <div class="hidden p-10 text-black bg-white w-96 menu" id="sixthMenu">Sixth Menu</div>
+    </div>
+
+    <script>
+        function changeMenu(e)
+        {
+            const menus = document.querySelectorAll('.menu');
+            menus.forEach(menu =>
+            {
+                menu.classList.add('hidden');
+            });
+            document.getElementById(e).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+
+</html>
