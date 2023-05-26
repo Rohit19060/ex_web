@@ -714,6 +714,13 @@ const cardArr: Card[] = [
     created_at: new Date("2023-05-25"),
     updated_at: new Date("2023-05-25"),
   },
+  {
+    url: "./pages/price_range_selector.html",
+    title: "Price Range Selector",
+    description: "Price Range Selector",
+    created_at: new Date("2023-05-26"),
+    updated_at: new Date("2023-05-26"),
+  },
 ];
 
 function createCard(e: Card) {
