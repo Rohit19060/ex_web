@@ -714,6 +714,13 @@ const cardArr = [
         created_at: new Date("2023-05-26"),
         updated_at: new Date("2023-05-26"),
     },
+    {
+        url: "./pages/toast.html",
+        title: "Toast",
+        description: "Toast",
+        created_at: new Date("2023-05-31"),
+        updated_at: new Date("2023-05-31"),
+    },
 ];
 function createCard(e) {
     let card = document.createElement("a");
