@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture In Picture</title>
+</head>
+
+<body>
+    <div id="playerContainer">
+        <div id="player">
+            <video id="video"></video>
+        </div>
+    </div>
+    <button id="pipButton">Open Picture-in-Picture window</button>
+    <script>
+        pipButton.addEventListener('click', async () =>
+        {
+            const player = document.querySelector("#player");
+
+            // Open a Picture-in-Picture window.
+            const pipWindow = await documentPictureInPicture.requestWindow();
+
+            // Move the player to the Picture-in-Picture window.
+            pipWindow.document.body.append(player);
+        });
+    </script>
+</body>
+
+</html>
